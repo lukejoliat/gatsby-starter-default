@@ -27,12 +27,24 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Poppins"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Adamina"
+            rel="stylesheet"
+          />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             margin: '0 auto',
-            maxWidth: 960,
+            maxWidth: 1000,
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}

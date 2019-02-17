@@ -5,18 +5,17 @@ import React from 'react'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: 'rebeccapurple',
       marginBottom: '1.45rem',
     }}
   >
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0, flex: 1 }}>
         <Link
           to="/"
           style={{
@@ -27,6 +26,11 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <ul>
+        <li>ABOUT ME</li>
+        <li>BLOG</li>
+        <li>CONTACT</li>
+      </ul>
     </div>
   </div>
 )
