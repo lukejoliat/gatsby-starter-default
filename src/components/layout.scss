@@ -628,20 +628,21 @@ pre tt:after {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 50px;
 }
-ul {
+.nav-right {
   display: flex;
 }
-ul li {
+.nav-right a {
+  text-decoration: none;
+}
+.nav-right li {
   padding: 10px;
   position: relative;
   text-decoration: none;
 }
-
-ul li:hover {
+.nav-right li:hover {
   cursor: pointer;
 }
-
-ul li:before {
+.nav-right li:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -653,8 +654,7 @@ ul li:before {
   transform: scaleX(0);
   transition: all 0.1s ease-in-out 0s;
 }
-
-ul li:hover:before {
+.nav-right li:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }

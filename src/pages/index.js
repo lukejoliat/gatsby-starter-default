@@ -22,14 +22,6 @@ const IndexPage = ({ data }) => (
       </div>
       <Image />
     </section>
-    <Link to="/page-2/">Go to page 2</Link>
-    {data.allMarkdownRemark.edges.map((post, k) => (
-      <div key={k}>
-        <Link to={post.node.frontmatter.path}>
-          {post.node.frontmatter.title}
-        </Link>
-      </div>
-    ))}
     <div style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}>
       <img src={code} alt="code" />
     </div>
