@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <section className="container">
       <div>
-        <h1 style={{ fontFamily: 'Adamina' }}>Hello, my name is Luke</h1>
+        <h1 style={{ fontFamily: 'Adamina' }}>Hello, my name is Luke.</h1>
         <p>
           I’m a passionate web developer and technology enthusiast with 4+ years
           of experience developing and designing web sites and applications.
@@ -31,11 +31,15 @@ const IndexPage = ({ data }) => (
       </div>
     ))}
     <div style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}>
-      <img src={code} />
+      <img src={code} alt="code" />
     </div>
     <div style={{ position: 'fixed', bottom: 0, right: 10, maxWidth: '50px' }}>
-      <a href="https://twitter.com/lcjfifty" target="_blank">
-        <img src={twitter} />
+      <a
+        href="https://twitter.com/lcjfifty"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={twitter} alt="twitter" />
       </a>
     </div>
   </Layout>
