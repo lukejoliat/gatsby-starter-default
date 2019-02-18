@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import code from '../images/code.png'
+import Mac from '../images/Mac.svg'
 import twitter from '../images/twitter.png'
 import Layout from '../components/layout'
 import Image from '../components/image'
+import SvgWithXlink from '../components/Svg'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -15,12 +17,14 @@ const IndexPage = ({ data }) => (
           of experience developing and designing web sites and applications.
         </p>
         <p>
-          I love learning, which makes me right at home in the world of web and
-          software development. Every year, every month even, there is something
-          new to learn or utilize for growth and improvement.
+          I love learning, which makes me right at home in the world of web
+          development. Every year, every month even, there is something new to
+          learn or utilize for growth and improvement.
         </p>
       </div>
-      <Image />
+      {/* <Image /> */}
+      {/* <img src={Mac} alt="" /> */}
+      <SvgWithXlink />
     </section>
     <div style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}>
       <img src={code} alt="code" />
