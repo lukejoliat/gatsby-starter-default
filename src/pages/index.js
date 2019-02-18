@@ -1,12 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import code from '../images/code.png'
-import Mac from '../images/Mac.svg'
 import twitter from '../images/twitter.png'
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SvgWithXlink from '../components/Svg'
-
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="container">
@@ -22,8 +19,6 @@ const IndexPage = ({ data }) => (
           learn or utilize for growth and improvement.
         </p>
       </div>
-      {/* <Image /> */}
-      {/* <img src={Mac} alt="" /> */}
       <SvgWithXlink />
     </section>
     <div style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}>
