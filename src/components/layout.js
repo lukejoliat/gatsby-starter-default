@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
+import code from '../images/code.png'
+import twitter from '../images/twitter.png'
 import Header from './header'
 import './layout.scss'
 
@@ -50,6 +51,22 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
+        </div>
+        <div
+          style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}
+        >
+          <img src={code} alt="code" />
+        </div>
+        <div
+          style={{ position: 'fixed', bottom: 0, right: 10, maxWidth: '50px' }}
+        >
+          <a
+            href="https://twitter.com/lcjfifty"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={twitter} alt="twitter" />
+          </a>
         </div>
       </>
     )}

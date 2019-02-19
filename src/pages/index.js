@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import code from '../images/code.png'
-import twitter from '../images/twitter.png'
 import Layout from '../components/layout'
 import SvgWithXlink from '../components/Svg'
 const IndexPage = ({ data }) => (
@@ -21,18 +19,6 @@ const IndexPage = ({ data }) => (
       </div>
       <SvgWithXlink />
     </section>
-    <div style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}>
-      <img src={code} alt="code" />
-    </div>
-    <div style={{ position: 'fixed', bottom: 0, right: 10, maxWidth: '50px' }}>
-      <a
-        href="https://twitter.com/lcjfifty"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={twitter} alt="twitter" />
-      </a>
-    </div>
   </Layout>
 )
 
