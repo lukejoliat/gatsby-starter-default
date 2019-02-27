@@ -70,7 +70,7 @@ const Layout = ({ children }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={linkedin} />
+            <img src={linkedin} alt="linkedin" />
           </a>
           <a
             className="github"
@@ -78,7 +78,7 @@ const Layout = ({ children }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={github} />
+            <img src={github} alt="github" />
           </a>
           <a
             href="https://twitter.com/lcjfifty"

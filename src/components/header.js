@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Hamburger from '../images/Hamburger.svg'
 class Header extends React.Component {
-  state = { windowWidth: window.innerWidth }
+  state = { windowWidth: 0 }
   handleResize = e => {
     this.setState(prevState => {
       const windowWidth = window.innerWidth
@@ -13,6 +13,7 @@ class Header extends React.Component {
     })
   }
   componentDidMount() {
+    this.handleResize()
     window.addEventListener('resize', this.handleResize)
   }
   componentWillUnmount() {
@@ -45,7 +46,9 @@ class Header extends React.Component {
               {this.state.windowWidth < 500 ? 'LJ' : this.props.siteTitle}
             </Link>
           </h1>
-          {this.state.windowWidth < 500 && <img src={Hamburger} width="50px" />}
+          {this.state.windowWidth < 500 && (
+            <img src={Hamburger} width="50px" alt="menu" />
+          )}
           {this.state.windowWidth > 500 && (
             <ul className="nav-right">
               <li>ABOUT ME</li>
