@@ -2,11 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import code from '../images/code.png'
+import code from '../images/Code.png'
 import twitter from '../images/twitter.png'
+import github from '../images/Github.png'
+import linkedin from '../images/Linkedin.png'
 import Header from './header'
 import './layout.scss'
-
+import { getRandomInt } from '../utils/utils';
+const theme = `theme-${getRandomInt(1, 13)}`
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -26,6 +29,7 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
+          bodyAttributes={{class: theme}}
         >
           <html lang="en" />
           <link
@@ -61,9 +65,26 @@ const Layout = ({ children }) => (
           style={{ position: 'fixed', bottom: 0, right: 10, maxWidth: '50px' }}
         >
           <a
+            className="linkedin"
+            href="https://linkedin.com/in/lukejoliat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} />
+          </a>
+          <a
+            className="github"
+            href="https://github.com/lukejoliat"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={github} />
+          </a>
+          <a
             href="https://twitter.com/lcjfifty"
             target="_blank"
             rel="noopener noreferrer"
+            className="twitter"
           >
             <img src={twitter} alt="twitter" />
           </a>
