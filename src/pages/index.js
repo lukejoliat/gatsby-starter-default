@@ -6,15 +6,16 @@ const IndexPage = ({ data }) => (
   <Layout>
     <section className="container">
       <div>
-        <h1 style={{ fontFamily: 'Adamina' }}>Hello, my name is Luke.</h1>
+        <h1 style={{ fontFamily: 'Adamina' }} className="intro-header">
+          Hello, my name is Luke.
+        </h1>
         <p>
           I’m a passionate web developer and technology enthusiast with 4+ years
           of experience developing and designing web sites and applications.
         </p>
         <p>
           I love learning, which makes me right at home in the world of web
-          development. Every year, every month even, there is something new to
-          learn or utilize for growth and improvement.
+          development.
         </p>
       </div>
       <SvgWithXlink />

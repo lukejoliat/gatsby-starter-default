@@ -6,7 +6,9 @@ export default function Template({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <h1 className="blog-header" style={{ fontFamily: 'Adamina' }}>
+        {post.frontmatter.title}
+      </h1>
       <section
         className="body"
         dangerouslySetInnerHTML={{ __html: post.html }}

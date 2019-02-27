@@ -5,14 +5,18 @@ import Layout from '../components/layout'
 
 const Blog = ({ data }) => (
   <Layout>
-    <h1>Welcome to the blog!</h1>
-    {data.allMarkdownRemark.edges.map((post, k) => (
-      <div key={k}>
-        <Link to={post.node.frontmatter.path}>
-          {post.node.frontmatter.title}
-        </Link>
-      </div>
-    ))}
+    <h1 className="blog-header" style={{ fontFamily: 'Adamina' }}>
+      Welcome to the blog!
+    </h1>
+    <ul>
+      {data.allMarkdownRemark.edges.map((post, k) => (
+        <li key={k}>
+          <Link to={post.node.frontmatter.path}>
+            {post.node.frontmatter.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
     {console.log(data)}
     <Link to="/">Go back to the homepage</Link>
   </Layout>

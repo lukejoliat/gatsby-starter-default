@@ -9,7 +9,7 @@ import linkedin from '../images/Linkedin.png'
 import Header from './header'
 import './layout.scss'
 import { getRandomInt } from '../utils/utils';
-const theme = `theme-${getRandomInt(1, 13)}`
+const theme = `theme-${getRandomInt(1, 12)}`
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`

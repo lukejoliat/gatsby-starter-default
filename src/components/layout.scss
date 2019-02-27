@@ -34,15 +34,12 @@ body {
     background: #59a96a;
   }
   &.theme-10 {
-    background: #d8d78f;
-  }
-  &.theme-11 {
     background: #8499b1;
   }
-  &.theme-12 {
+  &.theme-11 {
     background: #593f62;
   }
-  &.theme-13 {
+  &.theme-12 {
     background: #85cb33;
   }
 }
@@ -385,7 +382,6 @@ ul {
   margin-bottom: 1.45rem;
   list-style-position: outside;
   list-style-image: none;
-  list-style-type: none;
 }
 ol {
   margin-left: 1.45rem;
@@ -666,9 +662,16 @@ pre tt:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 50px;
+  align-items: center;
+}
+.intro-header {
+  font-size: 3rem;
 }
 .nav-right {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 .nav-right a {
   text-decoration: none;
@@ -700,6 +703,9 @@ pre tt:after {
 .cursor rect {
   -webkit-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
+}
+.blog-header {
+  font-size: 4rem;
 }
 @keyframes blink {
   from,
