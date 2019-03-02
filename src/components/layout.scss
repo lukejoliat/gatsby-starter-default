@@ -700,6 +700,7 @@ pre tt:after {
   visibility: visible;
   transform: scaleX(1);
 }
+.cursor,
 .cursor rect {
   -webkit-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;

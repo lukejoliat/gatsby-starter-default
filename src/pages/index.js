@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import SvgWithXlink from '../components/Svg'
-import Mac from '../images/Mac.svg'
+import OldMacSVG from '../assets/old-mac.svg'
+import NewMacSVG from '../assets/new-mac.svg'
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="container">
@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => (
           development.
         </p>
       </div>
-      <SvgWithXlink className="old-mac" />
-      <img src={Mac} alt="new mac" className="new-mac" />
+      <OldMacSVG className="old-mac" />
+      <NewMacSVG className="new-mac" />
     </section>
   </Layout>
 )
