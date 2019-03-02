@@ -19,7 +19,12 @@ class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
   }
-
+  toggleHamburger(e) {
+    e.target.dataset['open'] =
+      e.target.dataset['open'] === 'false'
+        ? (e.target.dataset['open'] = true)
+        : (e.target.dataset['open'] = false)
+  }
   render() {
     return (
       <div
@@ -42,7 +47,14 @@ class Header extends React.Component {
           </Link>
         </h2>
         {this.state.windowWidth < 500 && (
-          <img src={Hamburger} width="50px" alt="menu" />
+          // <img src={Hamburger} width="50px" alt="menu" />
+          <div
+            class="menu-wrapper"
+            onClick={e => this.toggleHamburger(e)}
+            data-open="false"
+          >
+            <div class="hamburger-menu" />
+          </div>
         )}
         {this.state.windowWidth > 500 && (
           <ul className="nav-right">
