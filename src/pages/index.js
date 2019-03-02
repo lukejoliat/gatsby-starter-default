@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SvgWithXlink from '../components/Svg'
-import Mac from '../images/mac.svg'
+import Mac from '../images/Mac.svg'
 const IndexPage = ({ data }) => (
   <Layout>
     <section className="container">
