@@ -6,6 +6,7 @@ export default function SvgWithXlink() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className="old-mac"
     >
       <g filter="url(#filter0_d)">
         <g filter="url(#filter1_d)">

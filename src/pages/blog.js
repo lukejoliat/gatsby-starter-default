@@ -5,9 +5,7 @@ import Layout from '../components/layout'
 
 const Blog = ({ data }) => (
   <Layout>
-    <h1 className="blog-header" style={{ fontFamily: 'Adamina' }}>
-      Welcome to the blog!
-    </h1>
+    <h1 className="blog-header">Welcome to the blog!</h1>
     <ul>
       {data.allMarkdownRemark.edges.map((post, k) => (
         <li key={k}>

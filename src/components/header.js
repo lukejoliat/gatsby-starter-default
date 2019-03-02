@@ -1,9 +1,8 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Hamburger from '../images/Hamburger.svg'
 class Header extends React.Component {
-  state = { windowWidth: 0 }
+  state = { windowWidth: 0, menuOpen: false }
   handleResize = e => {
     this.setState(prevState => {
       const windowWidth = window.innerWidth
@@ -19,11 +18,9 @@ class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
   }
-  toggleHamburger(e) {
-    e.target.dataset['open'] =
-      e.target.dataset['open'] === 'false'
-        ? (e.target.dataset['open'] = true)
-        : (e.target.dataset['open'] = false)
+  toggleHamburger() {
+    const menuOpen = !this.state.menuOpen
+    this.setState({ menuOpen })
   }
   render() {
     return (
@@ -35,6 +32,18 @@ class Header extends React.Component {
           alignItems: 'end',
         }}
       >
+        <div
+          className="slide-out-menu-container"
+          data-open={this.state.menuOpen ? 'true' : 'false'}
+        >
+          <ul className="slide-out-menu">
+            <li>ABOUT ME</li>
+            <li>
+              <Link to="/blog/">BLOG</Link>
+            </li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
         <h2 style={{ margin: 0, flex: 1 }}>
           <Link
             to="/"
@@ -47,13 +56,12 @@ class Header extends React.Component {
           </Link>
         </h2>
         {this.state.windowWidth < 500 && (
-          // <img src={Hamburger} width="50px" alt="menu" />
           <div
-            class="menu-wrapper"
-            onClick={e => this.toggleHamburger(e)}
-            data-open="false"
+            className="menu-wrapper"
+            onClick={() => this.toggleHamburger()}
+            data-open={this.state.menuOpen ? 'true' : 'false'}
           >
-            <div class="hamburger-menu" />
+            <div className="hamburger-menu" />
           </div>
         )}
         {this.state.windowWidth > 500 && (
