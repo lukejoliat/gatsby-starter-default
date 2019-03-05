@@ -7,7 +7,6 @@ import {
   connectStateResults,
 } from 'react-instantsearch-dom'
 import { Algolia } from 'styled-icons/fa-brands/Algolia'
-
 import { Root, HitsWrapper, By } from './styles'
 import Input from './Input'
 import * as hitComps from './hits'
@@ -24,7 +23,7 @@ const Stats = connectStateResults(
     res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
 )
 
-export default class Search extends Component {
+class Search extends Component {
   state = { query: ``, focussed: false, ref: createRef() }
   searchClient = algoliasearch(
     process.env.GATSBY_ALGOLIA_APP_ID,
@@ -96,3 +95,4 @@ export default class Search extends Component {
     )
   }
 }
+export default Search

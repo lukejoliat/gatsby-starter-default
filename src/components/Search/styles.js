@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { Search } from 'styled-icons/fa-solid/Search'
-
 export const Root = styled.div`
   position: relative;
   display: grid;
@@ -13,12 +12,12 @@ export const SearchIcon = styled(Search)`
 `
 
 const focussed = css`
-  background: ${props => props.theme.white};
-  color: ${props => props.theme.darkBlue};
+  background: transparent;
+  color: white;
   cursor: text;
-  width: 5em;
+  width: 10em;
   + ${SearchIcon} {
-    color: ${props => props.theme.darkBlue};
+    color: white;
     margin: 0.3em;
   }
 `
@@ -26,7 +25,7 @@ const focussed = css`
 const collapse = css`
   width: 0;
   cursor: pointer;
-  color: ${props => props.theme.lightBlue};
+  color: ${props => props.theme.white};
   + ${SearchIcon} {
     color: ${props => props.theme.white};
   }
@@ -111,8 +110,8 @@ export const HitsWrapper = styled.div`
     list-style: none;
   }
   mark {
-    color: ${props => props.theme.lightBlue};
-    background: ${props => props.theme.darkBlue};
+    color: ${props => props.theme.white};
+    background: ${props => props.theme.white};
   }
   header {
     display: flex;

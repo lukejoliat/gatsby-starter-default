@@ -4,7 +4,6 @@ import React from 'react'
 import Search from '../components/Search'
 
 const searchIndices = [
-  // { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
   { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
 ]
 class Header extends React.Component {
@@ -72,7 +71,7 @@ class Header extends React.Component {
         )}
         {this.state.windowWidth > 500 && (
           <ul className="nav-right">
-            <li>
+            <li className="search">
               <Search collapse indices={searchIndices} />
             </li>
             <li>ABOUT ME</li>

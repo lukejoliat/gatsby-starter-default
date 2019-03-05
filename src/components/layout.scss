@@ -78,6 +78,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: white;
 }
 a:active,
 a:hover {
@@ -684,7 +685,7 @@ pre tt:after {
 .nav-right li:hover {
   cursor: pointer;
 }
-.nav-right li:before {
+.nav-right li:before:not(.search) {
   content: '';
   position: absolute;
   width: 100%;
