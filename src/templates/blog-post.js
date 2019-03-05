@@ -7,6 +7,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       <h1 className="blog-header">{post.frontmatter.title}</h1>
+      <h2>{post.frontmatter.date}</h2>
       <section
         className="body"
         dangerouslySetInnerHTML={{ __html: post.html }}
@@ -27,6 +28,7 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
+        date
       }
     }
   }

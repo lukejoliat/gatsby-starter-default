@@ -1,6 +1,12 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Search from '../components/Search'
+
+const searchIndices = [
+  // { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
+  { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
+]
 class Header extends React.Component {
   state = { windowWidth: 0, menuOpen: false }
   handleResize = e => {
@@ -66,6 +72,9 @@ class Header extends React.Component {
         )}
         {this.state.windowWidth > 500 && (
           <ul className="nav-right">
+            <li>
+              <Search collapse indices={searchIndices} />
+            </li>
             <li>ABOUT ME</li>
             <li>
               <Link to="/blog/">BLOG</Link>

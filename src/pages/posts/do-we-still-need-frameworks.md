@@ -1,6 +1,7 @@
 ---
 path: '/do-we-still-need-frameworks'
 title: 'Do we still need JavaScript frameworks?'
+date: '2017-11-07'
 ---
 
 As a web developer, I try to assess my toolbox regularly and determine if I can do without this or that tool. Recently, I have been investigating just how easy it is to develop a complex front end application without a front end framework.
