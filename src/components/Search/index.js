@@ -12,7 +12,6 @@ import Input from './Input'
 import * as hitComps from './hits'
 
 const events = ['mousedown', 'touchstart']
-
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) =>
     res && res.nbHits ? children : `No results for ${state.query}`

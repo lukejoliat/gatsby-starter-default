@@ -25,20 +25,12 @@ const focussed = css`
 const collapse = css`
   width: 0;
   cursor: pointer;
-  color: ${props => props.theme.white};
-  + ${SearchIcon} {
-    color: ${props => props.theme.white};
-  }
   ${props => props.focussed && focussed}
   margin-left: ${props => (props.focussed ? `-1.6em` : `-1em`)};
   padding-left: ${props => (props.focussed ? `1.6em` : `1em`)};
-  ::placeholder {
-    color: ${props => props.theme.gray};
-  }
 `
 
 const expand = css`
-  background: ${props => props.theme.veryLightGray};
   width: 6em;
   margin-left: -1.6em;
   padding-left: 1.6em;
@@ -52,8 +44,7 @@ export const Input = styled.input`
   border: none;
   font-size: 1em;
   background: transparent;
-  transition: ${props => props.theme.shortTrans};
-  border-radius: ${props => props.theme.smallBorderRadius};
+  transition: 0.25s;
   ${props => (props.collapse ? collapse : expand)};
 `
 
@@ -71,16 +62,14 @@ const list = css`
   max-width: 30em;
   box-shadow: 0 0 5px 0;
   padding: 0.7em 1em 0.4em;
-  background: ${props => props.theme.white};
-  border-radius: ${props => props.theme.smallBorderRadius};
   > * + * {
     padding-top: 1em !important;
-    border-top: 2px solid ${props => props.theme.darkGray};
+    border-top: 2px solid;
   }
   li + li {
     margin-top: 0.7em;
     padding-top: 0.7em;
-    border-top: 1px solid ${props => props.theme.lightGray};
+    border-top: 1px solid;
   }
 `
 
@@ -91,8 +80,6 @@ const grid = css`
     grid-gap: 1em;
     li {
       padding: 0.3em 0.5em;
-      background: ${props => props.theme.veryLightGray};
-      border-radius: ${props => props.theme.smallBorderRadius};
     }
   }
 `
@@ -101,6 +88,11 @@ export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
   max-height: 80vh;
   overflow: scroll;
+  color: var(--grey);
+  background: white;
+  a {
+    color: var(--grey);
+  }
   ${props => (props.hitsAsGrid ? grid : list)};
   * {
     margin-top: 0;
@@ -109,19 +101,12 @@ export const HitsWrapper = styled.div`
   ul {
     list-style: none;
   }
-  mark {
-    color: ${props => props.theme.white};
-    background: ${props => props.theme.white};
-  }
   header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.3em;
     h3 {
-      color: ${props => props.theme.white};
-      background: ${props => props.theme.gray};
       padding: 0.1em 0.4em;
-      border-radius: ${props => props.theme.smallBorderRadius};
     }
   }
   h3 {
