@@ -804,15 +804,24 @@ $bar-spacing: 10px;
   margin: 0;
   list-style-type: none;
 }
-.new-mac {
-  display: none;
+
+@media screen and (min-width: 500px) {
+  .mobile-menu,
+  .mobile-title,
+  .new-mac {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .old-mac {
-    display: none;
-  }
+  .mobile-title,
+  .mobile-menu,
   .new-mac {
     display: block;
+  }
+  .desktop-title,
+  .desktop-menu,
+  .old-mac {
+    display: none;
   }
 }

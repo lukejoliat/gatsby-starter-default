@@ -7,22 +7,7 @@ const searchIndices = [
   { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
 ]
 class Header extends React.Component {
-  state = { windowWidth: 0, menuOpen: false }
-  handleResize = e => {
-    this.setState(prevState => {
-      const windowWidth = window.innerWidth
-      return {
-        windowWidth,
-      }
-    })
-  }
-  componentDidMount() {
-    this.handleResize()
-    window.addEventListener('resize', this.handleResize)
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  }
+  state = { menuOpen: false }
   toggleHamburger() {
     const menuOpen = !this.state.menuOpen
     this.setState({ menuOpen })
@@ -56,31 +41,38 @@ class Header extends React.Component {
               color: 'white',
               textDecoration: 'none',
             }}
+            className="mobile-title"
           >
-            {this.state.windowWidth < 500 ? 'LJ' : this.props.siteTitle}
+            LJ
+          </Link>
+          <Link
+            to="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+            }}
+            className="desktop-title"
+          >
+            {this.props.siteTitle}
           </Link>
         </h2>
-        {this.state.windowWidth < 500 && (
-          <div
-            className="menu-wrapper"
-            onClick={() => this.toggleHamburger()}
-            data-open={this.state.menuOpen ? 'true' : 'false'}
-          >
-            <div className="hamburger-menu" />
-          </div>
-        )}
-        {this.state.windowWidth > 500 && (
-          <ul className="nav-right">
-            <li className="search">
-              <Search collapse indices={searchIndices} />
-            </li>
-            <li>ABOUT ME</li>
-            <li>
-              <Link to="/blog/">BLOG</Link>
-            </li>
-            <li>CONTACT</li>
-          </ul>
-        )}
+        <div
+          className="menu-wrapper mobile-menu"
+          onClick={() => this.toggleHamburger()}
+          data-open={this.state.menuOpen ? 'true' : 'false'}
+        >
+          <div className="hamburger-menu" />
+        </div>
+        <ul className="nav-right desktop-menu">
+          <li className="search">
+            <Search collapse indices={searchIndices} />
+          </li>
+          <li>ABOUT ME</li>
+          <li>
+            <Link to="/blog/">BLOG</Link>
+          </li>
+          <li>CONTACT</li>
+        </ul>
       </div>
     )
   }
