@@ -8,8 +8,7 @@ import github from '../images/Github.png'
 import linkedin from '../images/Linkedin.png'
 import Header from './header'
 import './layout.scss'
-import { getRandomInt } from '../utils/utils';
-const theme = `theme-${getRandomInt(1, 12)}`
+import { getRandomInt } from '../utils/utils'
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -29,7 +28,6 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-          bodyAttributes={{class: theme}}
         >
           <html lang="en" />
           <link
