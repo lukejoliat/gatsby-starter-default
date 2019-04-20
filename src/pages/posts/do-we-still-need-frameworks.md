@@ -1,6 +1,7 @@
 ---
 path: '/do-we-still-need-frameworks'
 title: 'Do we still need JavaScript frameworks?'
+subtitle: 'Thoughts on the state of front end development'
 date: '2017-11-07'
 ---
 
