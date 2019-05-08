@@ -8,7 +8,8 @@ import github from '../images/Github.png'
 import linkedin from '../images/Linkedin.png'
 import Header from './header'
 import './layout.scss'
-import { getRandomInt } from '../utils/utils'
+import PageTransition from 'gatsby-plugin-page-transitions'
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -52,7 +53,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          {children}
+          <PageTransition transitionTime={300}>{children}</PageTransition>
         </div>
         <div
           style={{ position: 'fixed', bottom: 0, left: 10, maxWidth: '50px' }}

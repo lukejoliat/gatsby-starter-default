@@ -27,11 +27,15 @@ class Header extends React.Component {
           data-open={this.state.menuOpen ? 'true' : 'false'}
         >
           <ul className="slide-out-menu">
-            <li>ABOUT ME</li>
+            <li>
+              <Link to="/about-me/">ABOUT ME</Link>
+            </li>
             <li>
               <Link to="/blog/">BLOG</Link>
             </li>
-            <li>CONTACT</li>
+            <li>
+              <Link to="/contact/">CONTACT</Link>
+            </li>
           </ul>
         </div>
         <h2 style={{ margin: 0, flex: 1 }}>
@@ -67,11 +71,15 @@ class Header extends React.Component {
           <li className="search">
             <Search collapse indices={searchIndices} />
           </li>
-          <li>ABOUT ME</li>
+          <li>
+            <Link to="/about-me/">ABOUT ME</Link>
+          </li>
           <li>
             <Link to="/blog/">BLOG</Link>
           </li>
-          <li>CONTACT</li>
+          <li>
+            <Link to="/contact/">CONTACT</Link>
+          </li>
         </ul>
       </div>
     )

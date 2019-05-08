@@ -2,49 +2,19 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  --background: #5a67e6;
+  --grey: #444545;
+  --light-grey: #444545c9;
+  --dark-grey: #202121;
+  --light-purple: #5a67e6;
+  --medium-purple: #2a4494;
+  --dark-purple: #4a2545;
+  --light-green: #59a96a;
+  --dark-green: #41521f;
 }
 body {
   margin: 0;
   color: white;
-  background: var(--background);
-  --grey: #444545;
-}
-.theme-1 {
-  --background: #41521f;
-}
-.theme-2 {
-  --background: #4a2545;
-}
-.theme-3 {
-  --background: #596869;
-}
-.theme-4 {
-  --background: #63b995;
-}
-.theme-5 {
-  --background: #444545;
-}
-.theme-6 {
-  --background: #5a67e6;
-}
-.theme-7 {
-  --background: #a799b7;
-}
-.theme-8 {
-  --background: #2a4494;
-}
-.theme-9 {
-  --background: #59a96a;
-}
-.theme-10 {
-  --background: #8499b1;
-}
-.theme-11 {
-  --background: #593f62;
-}
-.theme-12 {
-  --background: #85cb33;
+  background: var(--grey);
 }
 article,
 aside,
@@ -713,18 +683,30 @@ pre tt:after {
 }
 .blog-list {
   list-style-type: none;
+  flex: 4;
+  margin: 0;
 }
 .blog-list li {
   padding: 1rem;
-  height: 100px;
+  min-height: 150px;
   align-items: center;
   display: flex;
+  border-bottom: 1px dotted #303030;
+  margin: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
   &:hover {
-    background-color: #414ecd;
+    background: var(--dark-grey);
+    transition: 0.2s;
   }
 }
 .blog-list li a {
   flex: 1;
+  text-decoration: none;
+}
+.about-me-image {
+  border-radius: 100%;
+  box-shadow: 0px 4px 10px -3px black;
 }
 @keyframes blink {
   from,
@@ -820,6 +802,37 @@ $bar-spacing: 10px;
   margin: 0;
   list-style-type: none;
 }
+.tags-list {
+  flex: 1;
+}
+.tag {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+  background: var(--medium-purple);
+  &.nodejs {
+    background: #43853d;
+  }
+  &.js {
+    background: #ecdb54;
+  }
+  &.react {
+    background: rgb(97, 218, 251);
+  }
+  &.angular {
+    background: #f44336;
+  }
+  &.vue {
+    background: #4fc08d;
+  }
+  &.express {
+    background: #eee;
+  }
+  &.aws {
+    background: #ec7211;
+  }
+}
 
 @media screen and (min-width: 500px) {
   .mobile-menu,
@@ -837,7 +850,8 @@ $bar-spacing: 10px;
   }
   .desktop-title,
   .desktop-menu,
-  .old-mac {
+  .old-mac,
+  .tags-list {
     display: none;
   }
 }

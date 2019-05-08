@@ -7,6 +7,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-page-transitions',
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
