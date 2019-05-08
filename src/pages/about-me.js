@@ -1,8 +1,7 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React, { Fragment } from 'react'
 import AboutMeImage from '../components/about-me-image'
 const AboutMePage = () => (
-  <Layout>
+  <Fragment>
     <section />
     <section
       style={{
@@ -24,7 +23,7 @@ const AboutMePage = () => (
         </div>
       </div>
     </section>
-  </Layout>
+  </Fragment>
 )
 
 export default AboutMePage

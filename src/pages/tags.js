@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 // Utilities
@@ -7,7 +7,6 @@ import kebabCase from 'lodash/kebabCase'
 // Components
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
 
 const TagsPage = ({
   data: {
@@ -17,7 +16,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <Layout>
+  <Fragment>
     <div>
       <Helmet title={title} />
       <div>
@@ -33,7 +32,7 @@ const TagsPage = ({
         </ul>
       </div>
     </div>
-  </Layout>
+  </Fragment>
 )
 
 TagsPage.propTypes = {

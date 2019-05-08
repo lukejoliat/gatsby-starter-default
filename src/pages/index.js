@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import OldMacSVG from '../assets/old-mac.svg'
 import NewMacSVG from '../assets/new-mac.svg'
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Fragment>
     <section className="container">
       <div>
         <h1 className="intro-header">Hello, my name is Luke.</h1>
@@ -20,7 +19,7 @@ const IndexPage = ({ data }) => (
       <OldMacSVG className="old-mac" />
       <NewMacSVG className="new-mac" />
     </section>
-  </Layout>
+  </Fragment>
 )
 
 export const pageQuery = graphql`

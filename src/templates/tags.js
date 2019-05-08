@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 // Components
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -13,7 +12,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <Layout>
+    <Fragment>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
@@ -31,7 +30,7 @@ const Tags = ({ pageContext, data }) => {
               We'll come back to it!
             */}
       <Link to="/tags">All tags</Link>
-    </Layout>
+    </Fragment>
   )
 }
 

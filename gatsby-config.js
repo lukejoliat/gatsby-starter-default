@@ -7,9 +7,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-page-transitions',
-    },
-    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
@@ -60,6 +57,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.js`),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
